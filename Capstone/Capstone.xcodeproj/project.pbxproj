@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE20C1DE2CB389F100A48540 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE20C1DD2CB389DF00A48540 /* Schema.swift */; };
+		AE20C1E12CB38BD800A48540 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE20C1E02CB38BD800A48540 /* RealmSwift */; };
+		AE20C1E22CB38C0100A48540 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = AE20C1E02CB38BD800A48540 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		AEFC8B5C2C7FDBEF0049DCE4 /* CapstoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC8B5B2C7FDBEF0049DCE4 /* CapstoneApp.swift */; };
 		AEFC8B5E2C7FDBEF0049DCE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC8B5D2C7FDBEF0049DCE4 /* ContentView.swift */; };
 		AEFC8B602C7FDBF10049DCE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFC8B5F2C7FDBF10049DCE4 /* Assets.xcassets */; };
@@ -35,7 +38,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AE20C1E32CB38C0100A48540 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE20C1E22CB38C0100A48540 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AE20C1DD2CB389DF00A48540 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		AEFC8B582C7FDBEF0049DCE4 /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFC8B5B2C7FDBEF0049DCE4 /* CapstoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneApp.swift; sourceTree = "<group>"; };
 		AEFC8B5D2C7FDBEF0049DCE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE20C1E12CB38BD800A48540 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +117,7 @@
 		AEFC8B5A2C7FDBEF0049DCE4 /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
+				AE20C1DD2CB389DF00A48540 /* Schema.swift */,
 				AEFC8B5B2C7FDBEF0049DCE4 /* CapstoneApp.swift */,
 				AEFC8B5D2C7FDBEF0049DCE4 /* ContentView.swift */,
 				AEFC8B5F2C7FDBF10049DCE4 /* Assets.xcassets */,
@@ -143,6 +163,7 @@
 				AEFC8B542C7FDBEF0049DCE4 /* Sources */,
 				AEFC8B552C7FDBEF0049DCE4 /* Frameworks */,
 				AEFC8B562C7FDBEF0049DCE4 /* Resources */,
+				AE20C1E32CB38C0100A48540 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +242,9 @@
 				Base,
 			);
 			mainGroup = AEFC8B4F2C7FDBEE0049DCE4;
+			packageReferences = (
+				AE20C1DF2CB38BD800A48540 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = AEFC8B592C7FDBEF0049DCE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,6 +291,7 @@
 				AEFC8B5E2C7FDBEF0049DCE4 /* ContentView.swift in Sources */,
 				AEFC8B682C7FDBF10049DCE4 /* Capstone.xcdatamodeld in Sources */,
 				AEFC8B5C2C7FDBEF0049DCE4 /* CapstoneApp.swift in Sources */,
+				AE20C1DE2CB389F100A48540 /* Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE20C1DF2CB38BD800A48540 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.54.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE20C1E02CB38BD800A48540 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE20C1DF2CB38BD800A48540 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AEFC8B662C7FDBF10049DCE4 /* Capstone.xcdatamodeld */ = {
